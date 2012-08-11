@@ -1,0 +1,15 @@
+html
+  head
+    title Synhl
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    script type="text/javascript" src="syntaxhl_js/shCore.js"
+    script type="text/javascript" src="syntaxhl_js/shBrushJScript.js"
+    script type="text/javascript" src="syntaxhl_js/shBrushCSharp.js"
+    script type="text/javascript" src="syntaxhl_js/shBrushJava.js"
+    link type="text/css" rel="stylesheet" href="syntaxhl_styles/shCoreDefault.css"
+    script type="text/javascript"
+      | SyntaxHighlighter.all();
+  body
+    = yield
